@@ -1,0 +1,18 @@
+%h3
+  = pluralize(@post.comments.count, "Comment")
+
+- @post.comments.each do |c|
+  = hidden_field_tag :post_id, @post.id
+
+  - if admin?
+    = link_to 'Destroy', c, :confirm => 'Are you sure?', :method => :delete
+    %br/
+    = c.email
+  %br/
+  %b= h(c.name) 
+  #date
+    commented on
+    = c.created_at.strftime("%B %d, %Y")
+    \: 
+  %p= raw(RDiscount.new(c.body).to_html)
+  

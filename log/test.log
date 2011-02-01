@@ -1,0 +1,1865 @@
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (94.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (131.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (270.0ms)[0m  describe `posts`
+  [1m[36mAREL (732.5ms)[0m  [1mINSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Foo and Bar', NULL, NULL, '2010-12-14 17:40:16', '2010-12-14 17:40:16')[0m
+  [1m[35mSQL (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 09:40:18 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (218.2ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Rendered posts/index.html.erb within layouts/application (83.7ms)
+Completed 200 OK in 1149ms (Views: 929.1ms | ActiveRecord: 1446.9ms)
+  [1m[35mSQL (205.5ms)[0m  ROLLBACK
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+
+
+Started GET "/logout" for 127.0.0.1 at 2010-12-14 09:40:23 -0800
+  Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 09:40:23 -0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts`
+Completed 200 OK in 47ms (Views: 46.4ms | ActiveRecord: 206.1ms)
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+
+
+Started GET "/admin" for 127.0.0.1 at 2010-12-14 09:40:23 -0800
+  Processing by SessionsController#new as HTML
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.9ms)
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (22.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (57.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.1ms)[0m  describe `posts`
+  [1m[36mAREL (162.6ms)[0m  [1mINSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Foo and Bar', NULL, NULL, '2010-12-14 23:04:23', '2010-12-14 23:04:23')[0m
+  [1m[35mSQL (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 15:04:23 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Rendered posts/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 46ms (Views: 44.7ms | ActiveRecord: 247.1ms)
+  [1m[35mSQL (0.9ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+
+
+Started GET "/logout" for 127.0.0.1 at 2010-12-14 15:04:24 -0800
+  Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 15:04:24 -0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT `posts`.* FROM `posts`
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 1.6ms)
+  [1m[36mSQL (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+
+
+Started GET "/admin" for 127.0.0.1 at 2010-12-14 15:04:24 -0800
+  Processing by SessionsController#new as HTML
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.7ms)
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (324.8ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (6.4ms)[0m  describe `posts`
+  [1m[36mAREL (0.6ms)[0m  [1mINSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Foo and Bar', NULL, NULL, '2010-12-14 23:33:52', '2010-12-14 23:33:52')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 15:33:53 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.9ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Rendered posts/index.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 75ms (Views: 73.1ms | ActiveRecord: 333.1ms)
+  [1m[35mSQL (13.3ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+
+
+Started GET "/logout" for 127.0.0.1 at 2010-12-14 15:33:53 -0800
+  Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-14 15:33:53 -0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts`
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 15:33:53 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 0.6ms)
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts`
+
+
+Started GET "/admin" for 127.0.0.1 at 2010-12-14 15:33:53 -0800
+  Processing by SessionsController#new as HTML
+Completed 200 OK in 24ms (Views: 23.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2010-12-14 15:33:54 -0800
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "password"=>"[FILTERED]", "commit"=>"Log in"}
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-14 15:33:54 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 15:33:54 -0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT `posts`.* FROM `posts`
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.5ms)
+  [1m[36mSQL (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (89.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (39.4ms)[0m  describe `posts`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Foo and Bar', NULL, NULL, '2010-12-14 23:35:42', '2010-12-14 23:35:42')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 15:35:43 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Rendered posts/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 57ms (Views: 54.9ms | ActiveRecord: 129.8ms)
+  [1m[35mSQL (59.0ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+
+
+Started GET "/logout" for 127.0.0.1 at 2010-12-14 15:35:43 -0800
+  Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-14 15:35:43 -0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts`
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 59.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 15:35:43 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.4ms)
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts`
+
+
+Started GET "/admin" for 127.0.0.1 at 2010-12-14 15:35:43 -0800
+  Processing by SessionsController#new as HTML
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2010-12-14 15:35:43 -0800
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "password"=>"[FILTERED]", "commit"=>"Log in"}
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-14 15:35:43 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms)
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (67.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (37.7ms)[0m  describe `posts`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Foo and Bar', NULL, NULL, '2010-12-14 23:37:57', '2010-12-14 23:37:57')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 15:37:57 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Rendered posts/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 106.3ms)
+  [1m[35mSQL (57.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+
+
+Started GET "/logout" for 127.0.0.1 at 2010-12-14 15:37:58 -0800
+  Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-14 15:37:58 -0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts`
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 57.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 15:37:58 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.4ms)
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts`
+
+
+Started GET "/admin" for 127.0.0.1 at 2010-12-14 15:37:58 -0800
+  Processing by SessionsController#new as HTML
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2010-12-14 15:37:58 -0800
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "password"=>"[FILTERED]", "commit"=>"Log in"}
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-14 15:37:58 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 15:37:58 -0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts`
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.4ms)
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (33.1ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.1ms)[0m  describe `posts`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Foo and Bar', NULL, NULL, '2010-12-14 23:40:56', '2010-12-14 23:40:56')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 15:40:56 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Rendered posts/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 45ms (Views: 43.4ms | ActiveRecord: 38.6ms)
+  [1m[35mSQL (47.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+
+
+Started GET "/logout" for 127.0.0.1 at 2010-12-14 15:40:57 -0800
+  Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-14 15:40:57 -0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts`
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 47.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 15:40:57 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.4ms)
+  [1m[35mSQL (0.3ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts`
+
+
+Started GET "/admin" for 127.0.0.1 at 2010-12-14 15:40:57 -0800
+  Processing by SessionsController#new as HTML
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2010-12-14 15:40:57 -0800
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "password"=>"[FILTERED]", "commit"=>"Log in"}
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-14 15:40:57 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 15:40:57 -0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts`
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2010-12-14 15:40:57 -0800
+  Processing by PostsController#new as HTML
+Completed 200 OK in 123ms (Views: 122.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2010-12-14 15:40:57 -0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Foo", "published"=>"0", "body"=>"The hills are alive with the sound of music"}, "commit"=>"Create Post"}
+  [1m[36mSQL (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Foo', 'The hills are alive with the sound of music', 0, '2010-12-14 23:40:57', '2010-12-14 23:40:57')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/posts
+Completed 302 Found in 4ms
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 15:40:57 -0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (15.7ms)[0m  SELECT `posts`.* FROM `posts`
+Completed 200 OK in 19ms (Views: 2.4ms | ActiveRecord: 16.4ms)
+  [1m[36mSQL (72.6ms)[0m  [1mSELECT COUNT(*) FROM `posts`[0m
+  [1m[35mSQL (12.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (30.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+
+
+Started GET "/logout" for 127.0.0.1 at 2010-12-14 18:13:21 -0800
+  Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-14 18:13:21 -0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (91.6ms)[0m  SELECT `posts`.* FROM `posts`
+Rendered collection (0.0ms)
+Completed 200 OK in 294ms (Views: 40.8ms | ActiveRecord: 122.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 18:13:22 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.4ms)
+  [1m[35mSQL (21.9ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (0.5ms)[0m  SELECT `posts`.* FROM `posts`
+
+
+Started GET "/admin" for 127.0.0.1 at 2010-12-14 18:13:22 -0800
+  Processing by SessionsController#new as HTML
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 22.5ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2010-12-14 18:13:22 -0800
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "password"=>"[FILTERED]", "commit"=>"Log in"}
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-14 18:13:22 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (9.3ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Rendered collection (0.0ms)
+Completed 200 OK in 15ms (Views: 4.4ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 18:13:22 -0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts`
+Rendered collection (0.0ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.4ms)
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+
+
+Started GET "/admin" for 127.0.0.1 at 2010-12-14 18:13:22 -0800
+  Processing by SessionsController#new as HTML
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2010-12-14 18:13:22 -0800
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "password"=>"[FILTERED]", "commit"=>"Log in"}
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-14 18:13:22 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.4ms)
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+
+
+Started GET "/logout" for 127.0.0.1 at 2010-12-14 18:15:21 -0800
+  Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-14 18:15:21 -0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts`
+Rendered collection (0.0ms)
+Completed 200 OK in 174ms (Views: 39.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 18:15:21 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.4ms)
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts`
+
+
+Started GET "/admin" for 127.0.0.1 at 2010-12-14 18:15:21 -0800
+  Processing by SessionsController#new as HTML
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2010-12-14 18:15:21 -0800
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "password"=>"[FILTERED]", "commit"=>"Log in"}
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-14 18:15:21 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 18:15:21 -0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.7ms)[0m  SELECT `posts`.* FROM `posts`
+Rendered collection (0.0ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.7ms)
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (158.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.1ms)[0m  describe `posts`
+  [1m[36mAREL (70.4ms)[0m  [1mINSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Foo and Bar', 'askjfds', NULL, '2010-12-15 02:17:29', '2010-12-15 02:17:29')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 18:17:29 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Rendered posts/_post.html.erb (129.9ms)
+Rendered posts/index.html.erb within layouts/application (166.8ms)
+Completed 200 OK in 242ms (Views: 210.3ms | ActiveRecord: 233.9ms)
+  [1m[35mSQL (69.9ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+
+
+Started GET "/logout" for 127.0.0.1 at 2010-12-14 18:17:30 -0800
+  Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-14 18:17:30 -0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts`
+Rendered collection (0.0ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 70.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 18:17:30 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Rendered collection (0.0ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.5ms)
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts`
+
+
+Started GET "/admin" for 127.0.0.1 at 2010-12-14 18:17:30 -0800
+  Processing by SessionsController#new as HTML
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2010-12-14 18:17:30 -0800
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "password"=>"[FILTERED]", "commit"=>"Log in"}
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-14 18:17:30 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 18:17:30 -0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts`
+Rendered collection (0.0ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.4ms)
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (47.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.7ms)[0m  describe `posts`
+  [1m[36mAREL (13.9ms)[0m  [1mINSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Foo and Bar', 'askjfds', NULL, '2010-12-15 02:19:20', '2010-12-15 02:19:20')[0m
+  [1m[35mSQL (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 18:19:20 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Rendered posts/_post.html.erb (86.9ms)
+Rendered posts/index.html.erb within layouts/application (96.2ms)
+Completed 200 OK in 150ms (Views: 148.5ms | ActiveRecord: 66.8ms)
+  [1m[35mSQL (67.7ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+
+
+Started GET "/logout" for 127.0.0.1 at 2010-12-14 18:19:21 -0800
+  Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-14 18:19:21 -0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts`
+Rendered collection (0.0ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 68.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 18:19:21 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Rendered collection (0.0ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.4ms)
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts`
+
+
+Started GET "/admin" for 127.0.0.1 at 2010-12-14 18:19:21 -0800
+  Processing by SessionsController#new as HTML
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2010-12-14 18:19:21 -0800
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "password"=>"[FILTERED]", "commit"=>"Log in"}
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-14 18:19:21 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 18:19:21 -0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts`
+Rendered collection (0.0ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2010-12-14 18:19:21 -0800
+  Processing by PostsController#new as HTML
+Completed 200 OK in 121ms (Views: 120.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2010-12-14 18:19:21 -0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Foo", "published"=>"0", "body"=>"The hills are alive with the sound of music"}, "commit"=>"Create Post"}
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Foo', 'The hills are alive with the sound of music', 0, '2010-12-15 02:19:21', '2010-12-15 02:19:21')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/posts/10
+Completed 302 Found in 6ms
+
+
+Started GET "/posts/10" for 127.0.0.1 at 2010-12-14 18:19:21 -0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` WHERE (`posts`.`id` = 10) LIMIT 1
+Rendered posts/_post.html.erb (3.4ms)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 1.1ms)
+  [1m[36mSQL (1.0ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (77.9ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (41.8ms)[0m  describe `posts`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Foo and Bar', 'askjfds', NULL, '2010-12-15 02:20:27', '2010-12-15 02:20:27')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 18:20:27 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Rendered posts/_post.html.erb (69.1ms)
+Rendered posts/index.html.erb within layouts/application (77.3ms)
+Completed 200 OK in 86ms (Views: 84.7ms | ActiveRecord: 120.9ms)
+  [1m[35mSQL (25.3ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+
+
+Started GET "/logout" for 127.0.0.1 at 2010-12-14 18:20:27 -0800
+  Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-14 18:20:28 -0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts`
+Rendered collection (0.0ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 25.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 18:20:28 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Rendered collection (0.0ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.3ms)
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts`
+
+
+Started GET "/admin" for 127.0.0.1 at 2010-12-14 18:20:28 -0800
+  Processing by SessionsController#new as HTML
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2010-12-14 18:20:28 -0800
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "password"=>"[FILTERED]", "commit"=>"Log in"}
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-14 18:20:28 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 18:20:28 -0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts`
+Rendered collection (0.0ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2010-12-14 18:20:28 -0800
+  Processing by PostsController#new as HTML
+Completed 200 OK in 100ms (Views: 99.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2010-12-14 18:20:28 -0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Foo", "published"=>"0", "body"=>"The hills are alive with the sound of music"}, "commit"=>"Create Post"}
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Foo', 'The hills are alive with the sound of music', 0, '2010-12-15 02:20:28', '2010-12-15 02:20:28')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/posts/12
+Completed 302 Found in 6ms
+
+
+Started GET "/posts/12" for 127.0.0.1 at 2010-12-14 18:20:28 -0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT `posts`.* FROM `posts` WHERE (`posts`.`id` = 12) LIMIT 1
+Rendered posts/_post.html.erb (47.0ms)
+Completed 200 OK in 57ms (Views: 54.6ms | ActiveRecord: 1.1ms)
+  [1m[36mSQL (850.0ms)[0m  [1mSELECT COUNT(*) FROM `posts`[0m
+  [1m[35mSQL (6.7ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (34.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (96.8ms)[0m  describe `posts`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Foo and Bar', 'askjfds', NULL, '2010-12-15 02:21:24', '2010-12-15 02:21:24')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 18:21:24 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Rendered posts/_post.html.erb (72.6ms)
+Rendered posts/index.html.erb within layouts/application (80.6ms)
+Completed 200 OK in 90ms (Views: 88.0ms | ActiveRecord: 132.0ms)
+  [1m[35mSQL (27.9ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+
+
+Started GET "/logout" for 127.0.0.1 at 2010-12-14 18:21:24 -0800
+  Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-14 18:21:24 -0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts`
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 28.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 18:21:25 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Rendered collection (0.0ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.4ms)
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts`
+
+
+Started GET "/admin" for 127.0.0.1 at 2010-12-14 18:21:25 -0800
+  Processing by SessionsController#new as HTML
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2010-12-14 18:21:25 -0800
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "password"=>"[FILTERED]", "commit"=>"Log in"}
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-14 18:21:25 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 18:21:25 -0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts`
+Rendered collection (0.0ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2010-12-14 18:21:25 -0800
+  Processing by PostsController#new as HTML
+Completed 200 OK in 72ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2010-12-14 18:21:25 -0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Foo", "published"=>"0", "body"=>"The hills are alive with the sound of music"}, "commit"=>"Create Post"}
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Foo', 'The hills are alive with the sound of music', 0, '2010-12-15 02:21:25', '2010-12-15 02:21:25')
+  [1m[36mSQL (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/posts/14
+Completed 302 Found in 5ms
+
+
+Started GET "/posts/14" for 127.0.0.1 at 2010-12-14 18:21:25 -0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` WHERE (`posts`.`id` = 14) LIMIT 1
+Rendered posts/_post.html.erb (3.1ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 1.1ms)
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM `posts`[0m
+  [1m[35mSQL (50.4ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (52.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (45.8ms)[0m  describe `posts`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Foo and Bar', 'askjfds', NULL, '2010-12-15 02:28:43', '2010-12-15 02:28:43')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 18:28:43 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Rendered posts/_post.html.erb (223.5ms)
+Rendered posts/index.html.erb within layouts/application (238.4ms)
+Completed 200 OK in 391ms (Views: 389.4ms | ActiveRecord: 99.6ms)
+  [1m[35mSQL (334.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+
+
+Started GET "/logout" for 127.0.0.1 at 2010-12-14 18:28:45 -0800
+  Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-14 18:28:45 -0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts`
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 334.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 18:28:45 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Rendered collection (0.0ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.4ms)
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts`
+
+
+Started GET "/admin" for 127.0.0.1 at 2010-12-14 18:28:45 -0800
+  Processing by SessionsController#new as HTML
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2010-12-14 18:28:45 -0800
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "password"=>"[FILTERED]", "commit"=>"Log in"}
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-14 18:28:45 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 18:28:45 -0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts`
+Rendered collection (0.0ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2010-12-14 18:28:45 -0800
+  Processing by PostsController#new as HTML
+Completed 200 OK in 106ms (Views: 52.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2010-12-14 18:28:45 -0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Foo", "published"=>"0", "body"=>"The hills are alive with the sound of music"}, "commit"=>"Create Post"}
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Foo', 'The hills are alive with the sound of music', 0, '2010-12-15 02:28:45', '2010-12-15 02:28:45')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/posts/16
+Completed 302 Found in 5ms
+
+
+Started GET "/posts/16" for 127.0.0.1 at 2010-12-14 18:28:45 -0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT `posts`.* FROM `posts` WHERE (`posts`.`id` = 16) LIMIT 1
+Rendered posts/_post.html.erb (3.1ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 1.1ms)
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM `posts`[0m
+  [1m[35mSQL (1.0ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (37.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (71.0ms)[0m  describe `posts`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Foo and Bar', 'askjfds', NULL, '2010-12-15 02:30:08', '2010-12-15 02:30:08')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 18:30:08 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Rendered posts/_post.html.erb (88.3ms)
+Rendered posts/index.html.erb within layouts/application (97.0ms)
+Completed 200 OK in 127ms (Views: 125.4ms | ActiveRecord: 109.5ms)
+  [1m[35mSQL (53.8ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+
+
+Started GET "/logout" for 127.0.0.1 at 2010-12-14 18:30:09 -0800
+  Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-14 18:30:09 -0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts`
+Rendered collection (0.0ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 54.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 18:30:09 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Rendered collection (0.0ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.4ms)
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts`
+
+
+Started GET "/admin" for 127.0.0.1 at 2010-12-14 18:30:09 -0800
+  Processing by SessionsController#new as HTML
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2010-12-14 18:30:09 -0800
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "password"=>"[FILTERED]", "commit"=>"Log in"}
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-14 18:30:09 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-14 18:30:09 -0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts`
+Rendered collection (0.0ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2010-12-14 18:30:09 -0800
+  Processing by PostsController#new as HTML
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2010-12-14 18:30:09 -0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Foo", "published"=>"0", "body"=>"The hills are alive with the sound of music"}, "commit"=>"Create Post"}
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Foo', 'The hills are alive with the sound of music', 0, '2010-12-15 02:30:09', '2010-12-15 02:30:09')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/posts/18
+Completed 302 Found in 5ms
+
+
+Started GET "/posts/18" for 127.0.0.1 at 2010-12-14 18:30:09 -0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` WHERE (`posts`.`id` = 18) LIMIT 1
+Rendered posts/_post.html.erb (3.1ms)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 1.1ms)
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM `posts`[0m
+  [1m[35mSQL (1.0ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (32.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (3.9ms)[0m  describe `posts`
+  [1m[36mAREL (221.8ms)[0m  [1mINSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Shazam', 'Boom', NULL, '2010-12-15 02:32:40', '2010-12-15 02:32:40')[0m
+  [1m[35mSQL (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mPost Load (53.7ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (`posts`.`title` = 'Shazam') LIMIT 1[0m
+  [1m[35mSQL (70.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (66.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (3.9ms)[0m  describe `posts`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Shazam', 'Boom', NULL, '2010-12-15 02:33:50', '2010-12-15 02:33:50')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (`posts`.`title` = 'Shazam') LIMIT 1[0m
+  [1m[35mSQL (45.0ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (23.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (85.0ms)[0m  describe `posts`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Shazam', 'Boom', NULL, '2010-12-15 02:35:05', '2010-12-15 02:35:05')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (`posts`.`title` = 'Shazam') LIMIT 1[0m
+
+
+Started GET "/posts.21" for 127.0.0.1 at 2010-12-14 18:35:06 -0800
+  Processing by PostsController#index as 
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts`
+Completed 406 Not Acceptable in 2ms
+  [1m[36mSQL (51.9ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (78.8ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.0ms)[0m  describe `posts`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Shazam', 'Boom', NULL, '2010-12-15 02:43:10', '2010-12-15 02:43:10')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (`posts`.`title` = 'Shazam') LIMIT 1[0m
+
+
+Started GET "/posts.22" for 127.0.0.1 at 2010-12-14 18:43:10 -0800
+  Processing by PostsController#index as 
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts`
+Completed 406 Not Acceptable in 2ms
+  [1m[36mSQL (45.0ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (11.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (20.8ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.6ms)[0m  describe `posts`
+  [1m[36mAREL (37.0ms)[0m  [1mINSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Foo and Bar', 'askjfds', NULL, '2010-12-26 18:17:07', '2010-12-26 18:17:07')[0m
+  [1m[35mSQL (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-26 11:17:07 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered posts/_post.html.haml (117.3ms)
+Rendered posts/index.html.haml within layouts/application (163.7ms)
+Completed 200 OK in 218ms (Views: 215.8ms | ActiveRecord: 74.5ms)
+  [1m[35mSQL (74.8ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+
+
+Started GET "/logout" for 127.0.0.1 at 2010-12-26 11:17:08 -0700
+  Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-26 11:17:08 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 75.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-26 11:17:08 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.4ms)
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (0.5ms)[0m  SELECT `posts`.* FROM `posts`
+
+
+Started GET "/admin" for 127.0.0.1 at 2010-12-26 11:17:08 -0700
+  Processing by SessionsController#new as HTML
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2010-12-26 11:17:08 -0700
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "password"=>"[FILTERED]", "commit"=>"Log in"}
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-26 11:17:08 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-26 11:17:08 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2010-12-26 11:17:08 -0700
+  Processing by PostsController#new as HTML
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2010-12-26 11:17:08 -0700
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Foo", "published"=>"0", "body"=>"The hills are alive with the sound of music"}, "commit"=>"Create Post"}
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Foo', 'The hills are alive with the sound of music', 0, '2010-12-26 18:17:08', '2010-12-26 18:17:08')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/posts/2
+Completed 302 Found in 5ms
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2010-12-26 11:17:08 -0700
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` WHERE (`posts`.`id` = 2) LIMIT 1
+Rendered posts/_post.html.haml (6.4ms)
+  [1m[36mComment Load (40.9ms)[0m  [1mSELECT `comments`.* FROM `comments` WHERE (`comments`.post_id = 2) ORDER BY created_at DESC[0m
+Mysql2::Error: Table 'verivore_test.comments' doesn't exist: SELECT `comments`.* FROM `comments` WHERE (`comments`.post_id = 2) ORDER BY created_at DESC
+Rendered comments/_comment.html.haml (69.2ms)
+Completed   in 144ms
+  [1m[35mSQL (1.0ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Shazam', 'Boom', NULL, '2010-12-26 18:17:08', '2010-12-26 18:17:08')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mPost Load (48.1ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (`posts`.`title` = 'Shazam') LIMIT 1[0m
+
+
+Started GET "/posts.3" for 127.0.0.1 at 2010-12-26 11:17:08 -0700
+  Processing by PostsController#index as 
+  [1m[35mPost Load (0.5ms)[0m  SELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0
+Completed 406 Not Acceptable in 2ms
+  [1m[36mSQL (18.0ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.3ms)[0m  describe `posts`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Foo and Bar', 'askjfds', NULL, '2010-12-26 18:18:12', '2010-12-26 18:18:12')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-26 11:18:12 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered posts/_post.html.haml (84.5ms)
+Rendered posts/index.html.haml within layouts/application (103.6ms)
+Completed 200 OK in 114ms (Views: 111.8ms | ActiveRecord: 6.3ms)
+  [1m[35mSQL (1.0ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+
+
+Started GET "/logout" for 127.0.0.1 at 2010-12-26 11:18:13 -0700
+  Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-26 11:18:13 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-26 11:18:13 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered collection (0.0ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.4ms)
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts`
+
+
+Started GET "/admin" for 127.0.0.1 at 2010-12-26 11:18:13 -0700
+  Processing by SessionsController#new as HTML
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2010-12-26 11:18:13 -0700
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "password"=>"[FILTERED]", "commit"=>"Log in"}
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-26 11:18:13 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered collection (0.0ms)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-26 11:18:13 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0
+Rendered collection (0.0ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2010-12-26 11:18:13 -0700
+  Processing by PostsController#new as HTML
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2010-12-26 11:18:13 -0700
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Foo", "published"=>"0", "body"=>"The hills are alive with the sound of music"}, "commit"=>"Create Post"}
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Foo', 'The hills are alive with the sound of music', 0, '2010-12-26 18:18:13', '2010-12-26 18:18:13')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/posts/2
+Completed 302 Found in 5ms
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2010-12-26 11:18:13 -0700
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` WHERE (`posts`.`id` = 2) LIMIT 1
+Rendered posts/_post.html.haml (6.4ms)
+  [1m[36mComment Load (0.8ms)[0m  [1mSELECT `comments`.* FROM `comments` WHERE (`comments`.post_id = 2) ORDER BY created_at DESC[0m
+Rendered comments/_comment.html.haml (18.5ms)
+Rendered comments/_comment_form.html.haml (32.1ms)
+Completed   in 127ms
+  [1m[35mSQL (1.0ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Shazam', 'Boom', NULL, '2010-12-26 18:18:13', '2010-12-26 18:18:13')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (`posts`.`title` = 'Shazam') LIMIT 1[0m
+
+
+Started GET "/posts.3" for 127.0.0.1 at 2010-12-26 11:18:13 -0700
+  Processing by PostsController#index as 
+  [1m[35mPost Load (0.5ms)[0m  SELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0
+Completed 406 Not Acceptable in 1ms
+  [1m[36mSQL (1.5ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (43.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.2ms)[0m  describe `posts`
+  [1m[36mAREL (49.6ms)[0m  [1mINSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Foo and Bar', 'askjfds', NULL, '2010-12-26 20:25:51', '2010-12-26 20:25:51')[0m
+  [1m[35mSQL (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-26 13:25:51 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered posts/_post.html.haml (113.4ms)
+Rendered posts/index.html.haml within layouts/application (131.6ms)
+Completed 200 OK in 142ms (Views: 140.1ms | ActiveRecord: 98.4ms)
+  [1m[35mSQL (33.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+
+
+Started GET "/logout" for 127.0.0.1 at 2010-12-26 13:25:52 -0700
+  Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-26 13:25:52 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 33.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-26 13:25:52 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.4ms)
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts`
+
+
+Started GET "/admin" for 127.0.0.1 at 2010-12-26 13:25:52 -0700
+  Processing by SessionsController#new as HTML
+Completed 200 OK in 13ms (Views: 12.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2010-12-26 13:25:52 -0700
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "password"=>"[FILTERED]", "commit"=>"Log in"}
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-26 13:25:52 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-26 13:25:52 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2010-12-26 13:25:52 -0700
+  Processing by PostsController#new as HTML
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2010-12-26 13:25:52 -0700
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Foo", "published"=>"0", "body"=>"The hills are alive with the sound of music"}, "commit"=>"Create Post"}
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Foo', 'The hills are alive with the sound of music', 0, '2010-12-26 20:25:52', '2010-12-26 20:25:52')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/posts/5
+Completed 302 Found in 61ms
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2010-12-26 13:25:52 -0700
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` WHERE (`posts`.`id` = 5) LIMIT 1
+Rendered posts/_post.html.haml (6.3ms)
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT `comments`.* FROM `comments` WHERE (`comments`.post_id = 5) ORDER BY created_at DESC[0m
+Rendered comments/_comment.html.haml (18.5ms)
+Rendered comments/_comment_form.html.haml (20.7ms)
+Completed 200 OK in 63ms (Views: 60.3ms | ActiveRecord: 1.5ms)
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM `posts`
+  [1m[36mSQL (0.9ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Shazam', 'Boom', NULL, '2010-12-26 20:25:52', '2010-12-26 20:25:52')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` WHERE (`posts`.`title` = 'Shazam') LIMIT 1
+
+
+Started GET "/posts.6" for 127.0.0.1 at 2010-12-26 13:25:52 -0700
+  Processing by PostsController#index as 
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Completed 406 Not Acceptable in 1ms
+  [1m[35mSQL (1.0ms)[0m  ROLLBACK
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (44.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.2ms)[0m  describe `posts`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Foo and Bar', 'askjfds', NULL, '2010-12-26 20:27:01', '2010-12-26 20:27:01')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-26 13:27:01 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered posts/_post.html.haml (99.1ms)
+Rendered posts/index.html.haml within layouts/application (119.3ms)
+Completed 200 OK in 156ms (Views: 154.0ms | ActiveRecord: 49.8ms)
+  [1m[35mSQL (40.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+
+
+Started GET "/logout" for 127.0.0.1 at 2010-12-26 13:27:02 -0700
+  Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-26 13:27:02 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 41.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-26 13:27:02 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.4ms)
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts`
+
+
+Started GET "/admin" for 127.0.0.1 at 2010-12-26 13:27:02 -0700
+  Processing by SessionsController#new as HTML
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2010-12-26 13:27:02 -0700
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "password"=>"[FILTERED]", "commit"=>"Log in"}
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-26 13:27:02 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-26 13:27:02 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2010-12-26 13:27:02 -0700
+  Processing by PostsController#new as HTML
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2010-12-26 13:27:02 -0700
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Foo", "published"=>"0", "body"=>"The hills are alive with the sound of music"}, "commit"=>"Create Post"}
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Foo', 'The hills are alive with the sound of music', 0, '2010-12-26 20:27:02', '2010-12-26 20:27:02')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/posts/8
+Completed 302 Found in 62ms
+
+
+Started GET "/posts/8" for 127.0.0.1 at 2010-12-26 13:27:02 -0700
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` WHERE (`posts`.`id` = 8) LIMIT 1
+Rendered posts/_post.html.haml (6.3ms)
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT `comments`.* FROM `comments` WHERE (`comments`.post_id = 8) ORDER BY created_at DESC[0m
+Rendered comments/_comment.html.haml (18.4ms)
+Rendered comments/_comment_form.html.haml (21.5ms)
+Completed 200 OK in 63ms (Views: 60.7ms | ActiveRecord: 1.5ms)
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM `posts`
+  [1m[36mSQL (0.9ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAREL (50.5ms)[0m  INSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Shazam', 'Boom', NULL, '2010-12-26 20:27:02', '2010-12-26 20:27:02')
+  [1m[36mSQL (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` WHERE (`posts`.`title` = 'Shazam') LIMIT 1
+
+
+Started GET "/posts.9" for 127.0.0.1 at 2010-12-26 13:27:02 -0700
+  Processing by PostsController#index as 
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Completed 406 Not Acceptable in 2ms
+  [1m[35mSQL (1.0ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (42.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.2ms)[0m  describe `posts`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Foo and Bar', 'askjfds', NULL, '2010-12-26 20:27:49', '2010-12-26 20:27:49')[0m
+  [1m[35mSQL (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-26 13:27:49 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered posts/_post.html.haml (77.8ms)
+Rendered posts/index.html.haml within layouts/application (98.0ms)
+Completed 200 OK in 216ms (Views: 213.9ms | ActiveRecord: 48.3ms)
+  [1m[35mSQL (1.4ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+
+
+Started GET "/logout" for 127.0.0.1 at 2010-12-26 13:27:50 -0700
+  Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-26 13:27:50 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-26 13:27:50 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.4ms)
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts`
+
+
+Started GET "/admin" for 127.0.0.1 at 2010-12-26 13:27:50 -0700
+  Processing by SessionsController#new as HTML
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2010-12-26 13:27:50 -0700
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "password"=>"[FILTERED]", "commit"=>"Log in"}
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-26 13:27:50 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-26 13:27:50 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0
+Rendered collection (0.0ms)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2010-12-26 13:27:50 -0700
+  Processing by PostsController#new as HTML
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2010-12-26 13:27:50 -0700
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Foo", "published"=>"0", "body"=>"The hills are alive with the sound of music"}, "commit"=>"Create Post"}
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Foo', 'The hills are alive with the sound of music', 0, '2010-12-26 20:27:50', '2010-12-26 20:27:50')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/posts/11
+Completed 302 Found in 63ms
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2010-12-26 13:27:50 -0700
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` WHERE (`posts`.`id` = 11) LIMIT 1
+Rendered posts/_post.html.haml (6.6ms)
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT `comments`.* FROM `comments` WHERE (`comments`.post_id = 11) ORDER BY created_at DESC[0m
+Rendered comments/_comment.html.haml (18.6ms)
+Rendered comments/_comment_form.html.haml (21.2ms)
+Completed 200 OK in 63ms (Views: 60.8ms | ActiveRecord: 1.5ms)
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM `posts`
+  [1m[36mSQL (0.9ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Shazam', 'Boom', NULL, '2010-12-26 20:27:50', '2010-12-26 20:27:50')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` WHERE (`posts`.`title` = 'Shazam') LIMIT 1
+
+
+Started GET "/posts.12" for 127.0.0.1 at 2010-12-26 13:27:50 -0700
+  Processing by PostsController#index as 
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Completed 406 Not Acceptable in 2ms
+  [1m[35mSQL (1.0ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (32.1ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (5.3ms)[0m  describe `posts`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Foo and Bar', 'askjfds', NULL, '2010-12-26 20:29:11', '2010-12-26 20:29:11')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-26 13:29:11 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered posts/_post.html.haml (71.5ms)
+Rendered posts/index.html.haml within layouts/application (91.5ms)
+Completed 200 OK in 110ms (Views: 107.6ms | ActiveRecord: 38.6ms)
+  [1m[35mSQL (35.7ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+
+
+Started GET "/logout" for 127.0.0.1 at 2010-12-26 13:29:11 -0700
+  Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-26 13:29:11 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 36.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-26 13:29:11 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.4ms)
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts`
+
+
+Started GET "/admin" for 127.0.0.1 at 2010-12-26 13:29:11 -0700
+  Processing by SessionsController#new as HTML
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2010-12-26 13:29:11 -0700
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "password"=>"[FILTERED]", "commit"=>"Log in"}
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-26 13:29:12 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-26 13:29:12 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2010-12-26 13:29:12 -0700
+  Processing by PostsController#new as HTML
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2010-12-26 13:29:12 -0700
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Foo", "published"=>"0", "body"=>"The hills are alive with the sound of music"}, "commit"=>"Create Post"}
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Foo', 'The hills are alive with the sound of music', 0, '2010-12-26 20:29:12', '2010-12-26 20:29:12')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/posts/14
+Completed 302 Found in 62ms
+
+
+Started GET "/posts/14" for 127.0.0.1 at 2010-12-26 13:29:12 -0700
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` WHERE (`posts`.`id` = 14) LIMIT 1
+Rendered posts/_post.html.haml (6.3ms)
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT `comments`.* FROM `comments` WHERE (`comments`.post_id = 14) ORDER BY created_at DESC[0m
+Rendered comments/_comment.html.haml (18.4ms)
+Rendered comments/_comment_form.html.haml (21.6ms)
+Completed 200 OK in 63ms (Views: 60.8ms | ActiveRecord: 1.5ms)
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM `posts`
+  [1m[36mSQL (46.9ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Shazam', 'Boom', NULL, '2010-12-26 20:29:12', '2010-12-26 20:29:12')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` WHERE (`posts`.`title` = 'Shazam') LIMIT 1
+
+
+Started GET "/posts.15" for 127.0.0.1 at 2010-12-26 13:29:12 -0700
+  Processing by PostsController#index as 
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Completed 406 Not Acceptable in 1ms
+  [1m[35mSQL (8.8ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (44.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.3ms)[0m  describe `posts`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Foo and Bar', 'askjfds', NULL, '2010-12-26 20:30:21', '2010-12-26 20:30:21')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-26 13:30:21 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered posts/_post.html.haml (70.4ms)
+Rendered posts/index.html.haml within layouts/application (90.4ms)
+Completed 200 OK in 118ms (Views: 116.3ms | ActiveRecord: 49.7ms)
+  [1m[35mSQL (35.4ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+
+
+Started GET "/logout" for 127.0.0.1 at 2010-12-26 13:30:21 -0700
+  Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-26 13:30:21 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 35.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-26 13:30:21 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.4ms)
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts`
+
+
+Started GET "/admin" for 127.0.0.1 at 2010-12-26 13:30:21 -0700
+  Processing by SessionsController#new as HTML
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2010-12-26 13:30:21 -0700
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "password"=>"[FILTERED]", "commit"=>"Log in"}
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-26 13:30:21 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-26 13:30:21 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2010-12-26 13:30:21 -0700
+  Processing by PostsController#new as HTML
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2010-12-26 13:30:21 -0700
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Foo", "published"=>"0", "body"=>"The hills are alive with the sound of music"}, "commit"=>"Create Post"}
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Foo', 'The hills are alive with the sound of music', 0, '2010-12-26 20:30:21', '2010-12-26 20:30:21')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/posts/17
+Completed 302 Found in 62ms
+
+
+Started GET "/posts/17" for 127.0.0.1 at 2010-12-26 13:30:21 -0700
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` WHERE (`posts`.`id` = 17) LIMIT 1
+Rendered posts/_post.html.haml (6.4ms)
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT `comments`.* FROM `comments` WHERE (`comments`.post_id = 17) ORDER BY created_at DESC[0m
+Rendered comments/_comment.html.haml (18.9ms)
+Rendered comments/_comment_form.html.haml (31.8ms)
+Completed 200 OK in 74ms (Views: 71.6ms | ActiveRecord: 1.5ms)
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM `posts`
+  [1m[36mSQL (0.9ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Shazam', 'Boom', NULL, '2010-12-26 20:30:21', '2010-12-26 20:30:21')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` WHERE (`posts`.`title` = 'Shazam') LIMIT 1
+
+
+Started GET "/posts.18" for 127.0.0.1 at 2010-12-26 13:30:21 -0700
+  Processing by PostsController#index as 
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Completed 406 Not Acceptable in 2ms
+  [1m[35mSQL (1.0ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (25.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (66.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (42.4ms)[0m  describe `posts`
+  [1m[36mAREL (33.0ms)[0m  [1mINSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Foo and Bar', 'askjfds', NULL, '2011-01-04 03:13:49', '2011-01-04 03:13:49')[0m
+  [1m[35mSQL (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-01-03 20:13:49 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered posts/_post.html.haml (139.8ms)
+Rendered posts/index.html.haml within layouts/application (188.7ms)
+Completed 200 OK in 254ms (Views: 251.6ms | ActiveRecord: 167.4ms)
+  [1m[35mSQL (72.0ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+
+
+Started GET "/logout" for 127.0.0.1 at 2011-01-03 20:13:50 -0700
+  Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 24ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-03 20:13:50 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0
+Rendered collection (0.0ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 72.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-01-03 20:13:50 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered collection (0.0ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.4ms)
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts`
+
+
+Started GET "/admin" for 127.0.0.1 at 2011-01-03 20:13:50 -0700
+  Processing by SessionsController#new as HTML
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-01-03 20:13:50 -0700
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "password"=>"[FILTERED]", "commit"=>"Log in"}
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-03 20:13:50 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered collection (0.0ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-01-03 20:13:50 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0
+Rendered collection (0.0ms)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-01-03 20:13:50 -0700
+  Processing by PostsController#new as HTML
+Completed 200 OK in 276ms (Views: 274.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-01-03 20:13:51 -0700
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Foo", "published"=>"0", "body"=>"The hills are alive with the sound of music"}, "commit"=>"Create Post"}
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Foo', 'The hills are alive with the sound of music', 0, '2011-01-04 03:13:51', '2011-01-04 03:13:51')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/posts/2
+Completed 302 Found in 5ms
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2011-01-03 20:13:51 -0700
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPost Load (23.2ms)[0m  SELECT `posts`.* FROM `posts` WHERE (`posts`.`id` = 2) LIMIT 1
+Rendered posts/_post.html.haml (8.0ms)
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE (`comments`.post_id = 2)[0m
+  [1m[35mComment Load (0.4ms)[0m  SELECT `comments`.* FROM `comments` WHERE (`comments`.post_id = 2) ORDER BY created_at DESC
+Rendered comments/_comment.html.haml (167.4ms)
+Rendered comments/_comment_form.html.haml (20.3ms)
+Completed 200 OK in 321ms (Views: 295.1ms | ActiveRecord: 24.5ms)
+  [1m[36mSQL (13.2ms)[0m  [1mSELECT COUNT(*) FROM `posts`[0m
+  [1m[35mSQL (0.9ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES ('Shazam', 'Boom', NULL, '2011-01-04 03:13:51', '2011-01-04 03:13:51')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mPost Load (41.7ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (`posts`.`title` = 'Shazam') LIMIT 1[0m
+
+
+Started GET "/posts.3" for 127.0.0.1 at 2011-01-03 20:13:51 -0700
+  Processing by PostsController#index as 
+  [1m[35mPost Load (0.6ms)[0m  SELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 10 OFFSET 0
+Completed 406 Not Acceptable in 2ms
+  [1m[36mSQL (1.0ms)[0m  [1mROLLBACK[0m

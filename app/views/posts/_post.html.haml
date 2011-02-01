@@ -1,0 +1,16 @@
+= div_for post do
+  %h2
+    = link_to_unless_current h(post.title), post
+  #date
+    = post.created_at.strftime("%B %d, %Y")
+  - if admin?
+    = link_to 'Edit', edit_post_path(post)
+    |
+    = link_to 'Destroy', post, :method => :delete, :confirm => "Are you sure?"
+  - if params[:action] == "index"
+    = raw(RDiscount.new(h(post.short_body)).to_html)
+    = link_to '[more]', post
+  - else
+    .post_body
+      = raw(RDiscount.new(h(post.body)).to_html)
+  %hr/

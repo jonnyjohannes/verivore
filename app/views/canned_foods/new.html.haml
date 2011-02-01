@@ -1,0 +1,50 @@
+- title "New Canned Food"
+
+%h1= yield(:title)
+= form_for @canned_food do |f|
+  %p
+    = f.label :name, "Name"
+    %br/
+    = f.text_field :name
+  %p
+    = f.label :quantity, "Quantity"
+    %br/
+    = f.text_area :quantity
+  %p
+    = f.label :quality, "Quality"
+    %br/
+    = f.text_area :quality
+  %p
+    = f.label :procedure, "Procedure"
+    %br/
+    = f.text_area :procedure
+  %p
+    = f.label :pack_style, "Pack Style"
+    %br/
+    = f.text_field :pack_style  
+  %p
+    = f.label :jar_size, "Jar Size"
+    %br/
+    = f.text_field :jar_size
+  %p
+    = f.label :process_time_1, "Process Time 1"
+    %br/
+    = f.text_field :process_time_1
+  %p
+    = f.label :process_time_2, "Process Time 2"
+    %br/
+    = f.text_field :process_time_2   
+  %p
+    = f.label :process_time_3, "Process Time 3"
+    %br/
+    = f.text_field :process_time_3
+  %p
+    = f.label :process_time_4, "Process Time 4"
+    %br/
+    = f.text_field :process_time_4
+  %p
+    = f.label :process_pressure, "Process Pressure"
+    %br/
+    = f.text_field :process_pressure  
+  %p.button 
+    = f.submit

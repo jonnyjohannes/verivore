@@ -1,0 +1,38 @@
+= div_for canned_food do
+  %h3
+    = link_to_unless_current h(canned_food.name.titleize), canned_food
+  - if params[:action] == "show"
+    %p 
+      %b Quantity: 
+      = canned_food.quantity
+    %p
+      %b Quality:
+      = canned_food.quality
+    %p
+      %b Procedure:
+      = canned_food.procedure
+    %p
+      %b Pack Style: 
+      = canned_food.pack_style
+    %p
+      %b Jar Size:
+      = canned_food.jar_size
+    %p
+      %b 
+        Processing Time:
+      - if params[:elevation] == 1
+        = canned_food.process_time_1
+      - elsif params[:elevation] == 2
+        = canned_food.process_time_2
+      - elsif params[:elevation] == 3 
+        = canned_food.process_time_3
+      - elsif params[:elevation] == 4
+        = canned_food.process_time_4
+      minutes
+    %p= canned_food.process_pressure
+
+    - if admin?
+      = link_to 'Edit', edit_canned_food_path(canned_food)
+      |
+      = link_to 'Destroy', canned_food, :method => :delete, :confirm => "Are you sure?"
+  %hr/

@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    = auto_discovery_link_tag :atom, posts_path(:atom)
+    
+- title "Weblog"
+
+%h2
+  = yield(:title)
+- if admin?
+  = link_to 'New Post', new_post_path
+  
+%p= will_paginate @posts
+= render :partial => @posts
+%p= will_paginate @posts
+
+

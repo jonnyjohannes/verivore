@@ -1,0 +1,9 @@
+- title "Canned Food: #{@canned_food.name.titleize}"
+
+- form_tag @canned_food, :method => 'get' do 
+  = text_field_tag :elevation, params[:elevation]
+  = submit_tag "Elevation", :name => nil
+  
+= render :partial => @canned_food
+.grid_6.omega
+  = link_to 'See All Canned Foods', canned_foods_path

@@ -1,0 +1,8 @@
+- title "Weblog: #{@post.title}"
+
+#page
+  = render :partial => @post
+  = render 'comments/comment'
+  = render 'comments/comment_form'
+  %p
+    = link_to 'See All Posts', posts_path

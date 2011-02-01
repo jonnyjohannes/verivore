@@ -1,0 +1,185 @@
+@font-face{
+  font-family: 'ubuntu';
+  src: url('/fonts/Ubuntu-Regular.ttf') format('truetype');
+}
+
+body {
+	font-family: ubuntu, arial, helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	border: 0;			/* This removes the border around the viewport in old versions of IE */
+	width: 100%;
+	background: #fff;
+	min-width: 600px;		/* Minimum width of layout - remove line if not required */
+					/* The min-width property does not work in old versions of Internet Explorer */
+	font-size: 90%;
+}
+
+a {
+	color: #006633;
+	text-decoration: none;
+}
+
+a: hover {
+	color: #006633;
+	text-decoration: none;
+}
+
+a img{
+	border: none;
+}
+
+h1, h2, h3 {
+	margin: .8em 0 .2em 0;
+	padding: 0;
+}
+
+p {
+	margin: .4em 0 .8em 0;
+	padding: 0;
+}
+
+#date{
+  display: inline;
+	font-size: 12px;
+}
+img {
+	margin: 10px 0 5px;
+}
+
+#ads img {
+	display: block;
+	padding-top: 10px;
+}
+
+/* Header styles */
+#header {
+	clear: both;
+	float: left;
+	width: 100%;
+	border-bottom: 1px solid #000;
+}
+
+#header h2 {
+	padding: .4em 15px 0 15px;
+	margin: 0;
+}
+
+#header ul {
+	clear: left;
+	float: left;
+	width: 100%;
+	list-style: none;
+	margin: 10px 0 0 0;
+	padding: 0;
+}
+
+#header ul li {
+	display: inline;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#header ul li a {
+	display: block;
+	float: left;
+	margin: 0 0 0 1px;
+	padding: 3px 10px;
+	text-align: center;
+	color: #006633;
+	text-decoration: none;
+	position: relative;
+	left: 15px;
+	line-height: 1.3em;	
+}
+
+#header ul li a.active,
+#header ul li a.active: hover {
+	color: #fff;
+	background: #000;
+	font-weight: bold;
+}
+
+#header ul li a span {
+	display: block;
+}
+
+/* 'widths' sub menu */
+#layoutdims {
+	clear: both;
+	background: #eee;
+	border-top: 4px solid #000;
+	margin: 0;
+	padding: 6px 15px !important;
+	text-align: right;
+}
+
+/* column container */
+.colmask {
+	position: relative;	/* This fixes the IE7 overflow hidden bug */
+	clear: both;
+	float: left;
+	width: 100%;			/* width of whole page */
+	overflow: hidden;		/* This chops off any overhanging divs */
+}
+
+/* common column settings */
+.colright,
+.colmid,
+.colleft {
+	float: left;
+	width: 100%;			/* width of page */
+	position: relative;
+}
+
+.col1
+.col2,
+.col3 {
+	float: left;
+	position: relative;
+	padding: 0 0 1em 0;	/* no left and right padding on columns, we just make them narrower instead 
+					only padding top and bottom is included here, make it whatever value you need */
+	overflow: hidden;
+}
+
+#foodtree a {
+  float: center;
+  background: url('/images/foodtree.png') no-repeat;
+  display: block;
+  height: 77px;
+  text-indent: -9999px;
+  margin: 10px 0 10px 46px;
+}
+
+.nav ul{
+	float: center;
+	padding: 0;
+	text-align: center;
+}
+
+.nav li{
+  display: inline;
+  padding: 5px;
+}
+
+/* Maps */
+#map_canvas {
+  height: 220px;
+  width: 220px;
+  /*margin: 8px 0 20px;*/
+  border: 1px solid #000;
+}
+
+/* Footer styles */
+#footer {
+	clear: both;
+	float: left;
+	width: 100%;
+	border-top: 1px solid #000;
+}
+
+#footer p {
+	padding: 10px;
+	margin: 0;
+}
