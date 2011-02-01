@@ -4,7 +4,7 @@
 }
 
 body {
-	font-family: ubuntu, arial, helvetica, sans-serif;
+	font-family: arial, helvetica, sans-serif;
 	margin: 0;
 	padding: 0;
 	border: 0;			/* This removes the border around the viewport in old versions of IE */

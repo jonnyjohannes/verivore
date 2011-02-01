@@ -20,7 +20,7 @@ class Post < ActiveRecord::Base
   @@per_page = 5
   
   def to_param
-    "#{id}-#{created_at.strftime("%Y")}-#{created_at.strftime("%m")}-#{created_at.strftime("%d")}-#{permalink}"
+    "#{id}-#{permalink}"
   end
   
   def short_body
