@@ -1,7 +1,14 @@
-!!!
-%html
-  %head
-    = auto_discovery_link_tag :atom, posts_path(:atom)
+%head
+  = auto_discovery_link_tag :atom, posts_path(:atom)
+  :javascript
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-17817043-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
     
 - title "Weblog"
 
@@ -9,7 +16,7 @@
   = yield(:title)
 - if admin?
   = link_to 'New Post', new_post_path
-  
+
 %p= will_paginate @posts
 = render :partial => @posts
 %p= will_paginate @posts
