@@ -1,37 +1,27 @@
-@font-face{
-  font-family: 'ubuntu';
-  src: url('/fonts/Ubuntu-Regular.ttf') format('truetype');
+* {
+  padding: 0;
+  margin: 0;
 }
 
 body {
 	font-family: arial, helvetica, sans-serif;
+	font-size: 14px;
 	margin: 0;
 	padding: 0;
-	border: 0;			/* This removes the border around the viewport in old versions of IE */
-	width: 100%;
 	background: #fff;
-	min-width: 600px;		/* Minimum width of layout - remove line if not required */
-					/* The min-width property does not work in old versions of Internet Explorer */
-	font-size: 90%;
 }
 
 a {
-	color: #006633;
+	color: #4183C4;
 	text-decoration: none;
 }
 
-a: hover {
-	color: #006633;
-	text-decoration: none;
+a:hover {
+	text-decoration: underline;
 }
 
 a img{
 	border: none;
-}
-
-h1, h2, h3 {
-	margin: .8em 0 .2em 0;
-	padding: 0;
 }
 
 p {
@@ -39,110 +29,108 @@ p {
 	padding: 0;
 }
 
-#date{
+.date{
   display: inline;
 	font-size: 12px;
 }
-img {
-	margin: 10px 0 5px;
-}
 
-#ads img {
-	display: block;
-	padding-top: 10px;
-}
+/* begin header and nav bar */
 
-/* Header styles */
 #header {
-	clear: both;
-	float: left;
-	width: 100%;
-	border-bottom: 1px solid #000;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  height: 150px;
+  border-bottom: 1px solid #787878;
+  background-image: url("/images/header_footer.png");
+  background-repeat: repeat-x;
+  position: relative;
+}
+#title {
+  font-size: 30px;
+  color: black;
+  position: absolute;
+  bottom: 50px;
+  text-decoration: none;
 }
 
-#header h2 {
-	padding: .4em 15px 0 15px;
-	margin: 0;
+#nav_bar {
+  background-image: url("/images/nav_bar.png");
+  margin: -20px 0 0 10px;
+  height: 45px;
+  width: 940px;
+  position: relative;
 }
 
-#header ul {
-	clear: left;
-	float: left;
-	width: 100%;
-	list-style: none;
-	margin: 10px 0 0 0;
-	padding: 0;
+#nav_bar a{
+  color: white;
 }
 
-#header ul li {
-	display: inline;
-	list-style: none;
-	margin: 0;
-	padding: 0;
+#nav_bar li{
+  list-style: none;
+  float: left;  
+  font-size: 17px;
+  color: white;
+  padding: 12px 20px;
+  height: 17px;
+  border-right: 2px solid #404040;
+}
+/* end header and nav bar */
+
+.canvas {
+  background: #e9e9e9;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-bottom-left-radius: 5px 5px;
+  -webkit-border-bottom-right-radius: 5px 5px;
+  -webkit-border-top-left-radius: 5px 5px;
+  -webkit-border-top-right-radius: 5px 5px;
 }
 
-#header ul li a {
-	display: block;
-	float: left;
-	margin: 0 0 0 1px;
-	padding: 3px 10px;
-	text-align: center;
-	color: #006633;
-	text-decoration: none;
-	position: relative;
-	left: 15px;
-	line-height: 1.3em;	
+.blog_content {
+  width: 640px;
+  margin: 20px auto 100px;
+  padding: 10px 0;
 }
 
-#header ul li a.active,
-#header ul li a.active: hover {
-	color: #fff;
-	background: #000;
-	font-weight: bold;
+.blog_content h1 {
+  font-size: 35px;
+  font-style: none;
+  margin-bottom: 10px;
+}
+.post_body {
+  border-bottom: 1px solid #787878;
+  margin-bottom: 10px;
+}
+#rss_icon {
+  float:right;
+  margin: 0 -20px;
+}
+/* begin footer */
+
+#footer {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  height: 150px;
+  border-top: 1px solid #787878;
+  background-image: url("/images/header_footer.png");
 }
 
-#header ul li a span {
-	display: block;
+/* end footer */
+.contact_links {
+  margin: 20px auto 20px;
+  padding: 0 0 10px;
 }
-
-/* 'widths' sub menu */
-#layoutdims {
-	clear: both;
-	background: #eee;
-	border-top: 4px solid #000;
-	margin: 0;
-	padding: 6px 15px !important;
-	text-align: right;
+.contact_links h3 {
+  text-align: center;
+  padding-top: 10px;
 }
-
-/* column container */
-.colmask {
-	position: relative;	/* This fixes the IE7 overflow hidden bug */
-	clear: both;
-	float: left;
-	width: 100%;			/* width of whole page */
-	overflow: hidden;		/* This chops off any overhanging divs */
+.contact_links li {
+  list-style: none;
+  float: left;
+  padding: 6px;
 }
-
-/* common column settings */
-.colright,
-.colmid,
-.colleft {
-	float: left;
-	width: 100%;			/* width of page */
-	position: relative;
-}
-
-.col1
-.col2,
-.col3 {
-	float: left;
-	position: relative;
-	padding: 0 0 1em 0;	/* no left and right padding on columns, we just make them narrower instead 
-					only padding top and bottom is included here, make it whatever value you need */
-	overflow: hidden;
-}
-
+ 
 #foodtree a {
   float: center;
   background: url('/images/foodtree.png') no-repeat;
@@ -152,18 +140,10 @@ img {
   margin: 10px 0 10px 46px;
 }
 
-.nav ul{
-	float: center;
-	padding: 0;
-	text-align: center;
+.pagination{
+  font-size: 12px;
 }
-
-.nav li{
-  display: inline;
-  padding: 5px;
-}
-
-/* Maps */
+/* begin maps */
 #map_canvas {
   height: 220px;
   width: 220px;
@@ -171,15 +151,52 @@ img {
   border: 1px solid #000;
 }
 
-/* Footer styles */
-#footer {
-	clear: both;
-	float: left;
-	width: 100%;
-	border-top: 1px solid #000;
-}
+/* end maps */
 
-#footer p {
-	padding: 10px;
-	margin: 0;
-}
+/* begin pagination */
+.digg_pagination {
+  background: #e9e9e9;
+  margin-bottom: 30px;
+  /* self-clearing method: */ }
+  .digg_pagination a, .digg_pagination span, .digg_pagination em {
+    padding: .2em .5em;
+    display: block;
+    float: left;
+    margin-right: 1px; }
+  .digg_pagination span.disabled {
+    color: #999;
+    border: 1px solid #DDD; }
+  .digg_pagination em {
+    font-weight: bold;
+    background: #4183C4;
+    color: white;
+    border: 1px solid #4183C4; }
+  .digg_pagination a {
+    text-decoration: none;
+    color: #4183C4;
+    border: 1px solid #9AAFE5; }
+    .digg_pagination a:hover, .digg_pagination a:focus {
+      color: #003;
+      border-color: #003; }
+  .digg_pagination .page_info {
+    background: #2E6AB1;
+    color: white;
+    padding: .4em .6em;
+    width: 22em;
+    margin-bottom: .3em;
+    text-align: center; }
+    .digg_pagination .page_info b {
+      color: #003;
+      background: #6aa6ed;
+      padding: .1em .25em; }
+  .digg_pagination:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  * html .digg_pagination {
+    height: 1%; }
+  *:first-child+html .digg_pagination {
+    overflow: hidden; }
+/* end pagination */
