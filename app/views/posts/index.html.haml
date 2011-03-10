@@ -10,15 +10,22 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
     
-- title "Weblog"
+- title "weblog"
 
-%h2
-  = yield(:title)
-- if admin?
-  = link_to 'New Post', new_post_path
+.grid_9
+  .canvas
+    .blog_content
+      %h1
+        = yield(:title)
+        = link_to image_tag("/images/rss-shadow.png"), posts_path(:atom), :id => "rss_icon"
+      - if admin?
+        = link_to 'New Post', new_post_path
+  
+      %p= will_paginate @posts, :class => "digg_pagination"
+      = render :partial => @posts
+      %p= will_paginate @posts, :class => "digg_pagination"
 
-%p= will_paginate @posts
-= render :partial => @posts
-%p= will_paginate @posts
+.grid_3
+  = render "shared/contact"
 
 
