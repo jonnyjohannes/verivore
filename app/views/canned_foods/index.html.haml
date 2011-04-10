@@ -9,7 +9,7 @@
 
 %h2= yield(:title)
 
-.grid_9.alpha
+.grid_6.alpha
   - if admin?
     = link_to 'New Canned Food', new_canned_food_path
   
@@ -18,8 +18,8 @@
       = text_field_tag :search, params[:search]
       = submit_tag "Search", :name => nil
 
-  /= render :partial => @canned_foods
-  %h3 Page coming soon!  Until then, enjoy the map on the right which locates where you are.
+  = render :partial => @canned_foods
+
 .grid_3.omega
   #map_canvas
     :javascript
