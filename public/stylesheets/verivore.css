@@ -45,6 +45,7 @@ p {
   background-image: url("/images/header_footer.png");
   background-repeat: repeat-x;
   position: relative;
+  font-style: none;
 }
 #title {
   font-size: 30px;
@@ -98,8 +99,25 @@ p {
   margin-bottom: 10px;
 }
 .post_body {
+  margin-bottom: 10px;
+}
+.tags {
   border-bottom: 1px solid #787878;
   margin-bottom: 10px;
+  padding: 5px 5px;
+  font-size: 12px;
+}
+.tags li {
+  list-style: none;
+  float: left;
+  border-right: 1px solid #787878;
+  .first{
+    border-right: none;
+  }
+}
+.comment_count {
+  border-left: 1px solid #787878;
+  padding-left: 5px;
 }
 #rss_icon {
   float:right;
@@ -109,17 +127,21 @@ p {
 
 #footer {
   width: 100%;
-  padding: 0;
-  margin: 0;
+  bottom: 0;
+  clear: both;
   height: 150px;
   border-top: 1px solid #787878;
   background-image: url("/images/header_footer.png");
 }
 
+#copyright {
+  margin: 10px;
+}
+
 /* end footer */
 .contact_links {
-  margin: 20px auto 20px;
   padding: 0 0 10px;
+  margin: 0 0 10px;
 }
 .contact_links h3 {
   text-align: center;
@@ -130,7 +152,20 @@ p {
   float: left;
   padding: 6px;
 }
- 
+.sidebar {
+  margin: 20px auto 20px;
+}
+.tag_list {
+  padding: 10px;
+}
+.tag_list h3 {
+  padding: 0 0 10px;
+}
+.tag_list li{
+  list-style: none;
+  padding: 5px;
+}
+
 #foodtree a {
   float: center;
   background: url('/images/foodtree.png') no-repeat;
@@ -145,8 +180,8 @@ p {
 }
 /* begin maps */
 #map_canvas {
-  height: 220px;
-  width: 220px;
+  height: 300px;
+  width: 460px;
   /*margin: 8px 0 20px;*/
   border: 1px solid #000;
 }

@@ -6,6 +6,7 @@ Verivore::Application.routes.draw do
   resources :sessions
   resources :comments
   resources :canned_foods
+  resources :tags
   
   #loggin in and out for admin
   match 'admin', :to => 'sessions#new', :as => 'admin'

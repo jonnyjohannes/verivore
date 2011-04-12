@@ -2,8 +2,8 @@
 
 .grid_9.canvas
   #page.blog_content
-    %p= link_to '<< Back to all posts', posts_path
     = render :partial => @post
+    %p= link_to '<< Back to all posts', posts_path
   
     %h2 Comments
     #disqus_thread
@@ -20,4 +20,3 @@
       Please enable JavaScript to view the
       %a{:href => "http://disqus.com/?ref_noscript"} comments powered by Disqus.
   
-

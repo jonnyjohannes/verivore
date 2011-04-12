@@ -1,0 +1,7 @@
+.canvas
+  .tag_list
+    %h3 tags
+    - Tag.all.each do |t|
+      %li
+        = link_to_unless_current t.name, t
+        = "(#{t.posts.count})"

@@ -1,0 +1,13 @@
+- title "posts tagged with '#{@tag.name}'"
+
+.grid_9
+  .canvas
+    .blog_content  
+      %h1= yield(:title)
+      %br/
+      %p= will_paginate @tagged_posts, :class => "digg_pagination"
+      = render :partial => @tagged_posts
+      %p= will_paginate @tagged_posts, :class => "digg_pagination"
+      
+.grid_3.sidebar
+  = render "shared/tags"

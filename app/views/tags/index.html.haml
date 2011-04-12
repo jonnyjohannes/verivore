@@ -1,0 +1,12 @@
+- title "tags"
+
+.grid_9
+  .canvas
+    .blog_content
+      %h1
+        = yield(:title)
+  
+      %p= will_paginate @tags, :class => "digg_pagination"
+      = render "shared/tags"
+      %p= will_paginate @tags, :class => "digg_pagination"
+
