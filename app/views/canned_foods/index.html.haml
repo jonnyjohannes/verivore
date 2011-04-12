@@ -1,5 +1,4 @@
 - title "Canned Foods Calculator"
-- javascript "maps"
 
 %head
   %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
@@ -9,7 +8,7 @@
 
 %h2= yield(:title)
 
-.grid_9.alpha
+.grid_6.alpha
   - if admin?
     = link_to 'New Canned Food', new_canned_food_path
   
@@ -18,56 +17,10 @@
       = text_field_tag :search, params[:search]
       = submit_tag "Search", :name => nil
 
-  /= render :partial => @canned_foods
-  %h3 Page coming soon!  Until then, enjoy the map on the right which locates where you are.
-.grid_3.omega
+  %strong Page coming soon! Until then, enjoy the map on the right which locates where you are.
+  
+  = render :partial => @canned_foods
+
+.grid_6.omega
   #map_canvas
-    :javascript
-      var initialLocation;
-      var siberia = new google.maps.LatLng(60, 105);
-      var newyork = new google.maps.LatLng(40.69847032728747, -73.9514422416687);
-      var browserSupportFlag =  new Boolean();
-
-      function initialize() {
-      var myOptions = {
-      zoom: 10,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-      };
-      var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-
-      // Try W3C Geolocation (Preferred)
-      if(navigator.geolocation) {
-      browserSupportFlag = true;
-      navigator.geolocation.getCurrentPosition(function(position) {
-      initialLocation = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
-      map.setCenter(initialLocation);
-      }, function() {
-      handleNoGeolocation(browserSupportFlag);
-      });
-      // Try Google Gears Geolocation
-      } else if (google.gears) {
-      browserSupportFlag = true;
-      var geo = google.gears.factory.create('beta.geolocation');
-      geo.getCurrentPosition(function(position) {
-      initialLocation = new google.maps.LatLng(position.latitude,position.longitude);
-      map.setCenter(initialLocation);
-      }, function() {
-      handleNoGeoLocation(browserSupportFlag);
-      });
-      // Browser doesn't support Geolocation
-      } else {
-      browserSupportFlag = false;
-      handleNoGeolocation(browserSupportFlag);
-      }
-
-      function handleNoGeolocation(errorFlag) {
-      if (errorFlag == true) {
-      alert("Geolocation service failed.");
-      initialLocation = newyork;
-      } else {
-      alert("Your browser doesn't support geolocation. We've placed you in Siberia.");
-      initialLocation = siberia;
-      }
-      map.setCenter(initialLocation);
-      }
-      }
+    %script{:src => "/javascripts/maps.js", :type => "text/javascript"}

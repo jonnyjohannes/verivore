@@ -8,4 +8,10 @@
     |
     = link_to 'Destroy', post, :method => :delete, :confirm => "Are you sure?"
   .post_body
-    = raw(RDiscount.new(h(post.body)).to_html)
+    = raw(RDiscount.new(coderay(post.body)).to_html)
+  .tags
+    %strong tags:
+    - post.tags.each do |t|
+      = link_to t.name, t
+    %strong.comment_count comments:
+    = link_to h(post.title), post_path(post) + "#disqus_thread", "data-disqus-identifier" => "post_#{post.id}"

@@ -29,11 +29,12 @@ Feature: Manage Posts
 
 @comment
   Scenario: Leave a Comment
-    Given I have a post called "Shazam"
+    Given I have posts called Shazam
     And I am reading "Shazam"
-    When I fill in "Name" with "Foo"
-    And I fill in "Email" with "foo@bar.com"
-    And I fill in "Comment" with "This is awesome"
+    And show me the page
+    When I fill in "comment_name" with "Foo"
+    And I fill in "comment_email" with "foo@bar.com"
+    And I fill in "comment_body" with "This is awesome"
     Then I should see "Comment posted, thanks for the feedback"
     And I should see "This is awesome"
     And I should see "Foo"

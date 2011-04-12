@@ -26,6 +26,6 @@ Given /^I have a post called "([^"]*)"$/ do |title|
   Post.create!(:title => title, :body => "Boom")
 end
 
-Given /^I am reading "([^"]*)"$/ do |title|
-  visit posts_url(Post.find_by_title(title))
+Given /^I am reading (.+)$/ do |title|
+  visit posts_path(Post.find_by_title(title))
 end
