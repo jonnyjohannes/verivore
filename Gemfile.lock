@@ -42,6 +42,7 @@ GEM
     celerity (0.8.5)
     childprocess (0.1.4)
       ffi (~> 0.6.3)
+    coderay (0.9.7)
     configuration (1.2.0)
     cucumber (0.10.0)
       builder (>= 2.1.2)
@@ -135,6 +136,7 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
+  coderay
   cucumber (>= 0.7.3)
   cucumber-rails
   database_cleaner
