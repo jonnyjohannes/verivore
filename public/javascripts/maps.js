@@ -5,6 +5,7 @@ var initialLocation;
 var siberia = new google.maps.LatLng(60, 105);
 var newyork = new google.maps.LatLng(40.69847032728747, -73.9514422416687);
 var browserSupportFlag =  new Boolean();
+var infowindow = new google.maps.InfoWindow({width:100});
 
 function initialize() {
   var myOptions = {
@@ -18,7 +19,11 @@ function initialize() {
     browserSupportFlag = true;
     navigator.geolocation.getCurrentPosition(function(position) {
       initialLocation = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+      contentString = "Hey, looks like you're canning here.  Neat!"
       map.setCenter(initialLocation);
+      infowindow.setContent(contentString)
+      infowindow.setPosition(initialLocation)
+      infowindow.open(map)
     }, function() {
       handleNoGeolocation(browserSupportFlag);
     });
