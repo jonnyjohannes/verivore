@@ -1,22 +1,25 @@
 - title "#{@post.title}"
 
-.grid_9.canvas
-  #page.blog_content
-    = render :partial => @post
-    %p= link_to '<< Back to all posts', posts_path
+.grid_9
+  .canvas
+    .blog_content
+      = render :partial => @post
+      %p= link_to '<< Back to all posts', posts_path
   
-    %h2 Comments
-    #disqus_thread
-    :javascript
-      var disqus_shortname = "verivore";
-      var disqus_identifier = "post_#{@post.id}";
-      var disqus_url = "http://verivore.com/posts/#{@post.id}";
-      (function() {
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      })();
-    %noscript
-      Please enable JavaScript to view the
-      %a{:href => "http://disqus.com/?ref_noscript"} comments powered by Disqus.
+      %h2 Comments
+      #disqus_thread
+      :javascript
+        var disqus_shortname = "verivore";
+        var disqus_identifier = "post_#{@post.id}";
+        var disqus_url = "http://verivore.com/posts/#{@post.id}";
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      %noscript
+        Please enable JavaScript to view the
+        %a{:href => "http://disqus.com/?ref_noscript"} comments powered by Disqus.
   
+.grid_3.sidebar
+  = render "shared/tags"
