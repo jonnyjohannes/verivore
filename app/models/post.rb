@@ -17,6 +17,14 @@ class Post < ActiveRecord::Base
 	has_many :taggings, :dependent => :destroy
 	has_many :tags, :through => :taggings
 	has_permalink :title, :update => true
+	
+	has_attached_file :image, :styles => { :small => "150x150>" }, 
+	                  :url => "/assets/posts/:id/:style/:basename.:extension", 
+	                  :path => ":rails_root/public/assets/posts/:id/:style/:basename.:extension"
+	                  
+	validates_attachment_size :image, :less_than => 5.megabytes
+	validates_attachment_content_type :image, :content_type => ['image/jpeg', 'image/png']
+	
 	after_save :assign_tags
 	attr_writer :tag_names
 	

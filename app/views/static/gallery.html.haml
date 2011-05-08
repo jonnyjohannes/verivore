@@ -1,0 +1,22 @@
+- title "gallery"
+- javascript "jquery.fancybox-1.3.4"
+- javascript "jquery.fancyphotoset-0.4.0.min"
+- stylesheet "jquery.fancybox-1.3.4"
+  
+.grid_9
+  .canvas
+    .blog_content
+      %h1= yield(:title)
+      
+      %h2 Random Food
+      #gallery
+        :javascript
+          $(document).ready(function() {
+            $('#gallery').fancyPhotoset({
+              apiKey: '067155c46c55e47ef0544d70de0a8e29', 
+              photosetId: '72157626385437731'
+            });
+          });
+      
+.grid_3.sidebar
+  = render "shared/contact"

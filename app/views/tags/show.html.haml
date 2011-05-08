@@ -1,9 +1,14 @@
+%head
+  = auto_discovery_link_tag :atom, posts_path(:atom)
+  
 - title "'#{@tag.name}' posts"
 
 .grid_9
   .canvas
     .blog_content  
-      %h1= yield(:title)
+      %h1
+        = yield(:title)
+        = link_to image_tag("/images/rss-shadow.png"), posts_path(:atom), :id => "rss_icon"
       %br/
       %p= will_paginate @tagged_posts, :class => "digg_pagination"
       = render :partial => @tagged_posts

@@ -3,22 +3,25 @@
   %head
     %title
       verivore - #{h(yield(:title) || "Loving Food and Tech")}
-    = stylesheet_link_tag :all
+    = stylesheet_link_tag "verivore"
+    = stylesheet_link_tag "960"
     %script{:type => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js" }
-    = javascript_include_tag :all
+    = javascript_include_tag "application.js"    
     = csrf_meta_tag
-  %body
+    = yield :head
+    
+  %body{:onload => "initialize()"}
     #header
       .container_12
         = link_to "verivore", root_path, :id => "title"
+    
     .container_12
-
-      
       #nav_bar
         %ul
           %li= link_to "weblog", root_path
           %li= link_to "canning calculator", canned_foods_path
-          /%li= link_to "about", about_path
+          %li= link_to "gallery", gallery_path
+          %li= link_to "about", about_path
       %p{:style => "color: green"}= flash[:notice]
       = yield
 
@@ -26,6 +29,8 @@
       .container_12
         #copyright
           &copy; verivore
+    
+    /*** Begin Google Analytics ***/     
     :javascript
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-17817043-2']);
@@ -35,5 +40,6 @@
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
+    /*** End Google Analytics ***/
         
           

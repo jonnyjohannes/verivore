@@ -1,3 +1,5 @@
+- stylesheet "coderay"
+
 = div_for post do
   %h3
     = link_to_unless_current h(post.title), post
@@ -9,6 +11,7 @@
     = link_to 'Destroy', post, :method => :delete, :confirm => "Are you sure?"
   .post_body
     = raw(RDiscount.new(coderay(post.body)).to_html)
+    = image_tag post.image.url(:small) unless post.image.url(:small) == "/images/small/missing.png"
   .tags
     %strong tags:
     - post.tags.each do |t|

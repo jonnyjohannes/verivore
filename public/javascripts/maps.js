@@ -19,7 +19,7 @@ function initialize() {
     browserSupportFlag = true;
     navigator.geolocation.getCurrentPosition(function(position) {
       initialLocation = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
-      contentString = "Hey, looks like you're canning here.  Neat!"
+      contentString = "<br/>Hey, looks like you're canning here.  Neat!"
       map.setCenter(initialLocation);
       infowindow.setContent(contentString)
       infowindow.setPosition(initialLocation)
