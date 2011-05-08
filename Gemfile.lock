@@ -77,6 +77,9 @@ GEM
     mime-types (1.16)
     mysql2 (0.2.6)
     nokogiri (1.4.4)
+    paperclip (2.3.11)
+      activerecord (>= 2.3.0)
+      activesupport (>= 2.3.2)
     polyglot (0.3.1)
     rack (1.2.1)
     rack-mount (0.6.13)
@@ -143,6 +146,7 @@ DEPENDENCIES
   haml
   launchy
   mysql2
+  paperclip
   rails (= 3.0.3)
   rdiscount (>= 1.6.8)
   rspec
