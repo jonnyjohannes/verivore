@@ -12,6 +12,9 @@ Verivore::Application.routes.draw do
   match 'admin', :to => 'sessions#new', :as => 'admin'
   match 'logout', :to => 'sessions#destroy', :as => 'logout'
   
+  #static pages
+  match 'about', :to => 'static#about', :as => 'about'
+  match 'gallery', :to => 'static#gallery', :as => 'gallery'
   
   root :to => 'posts#index'
   

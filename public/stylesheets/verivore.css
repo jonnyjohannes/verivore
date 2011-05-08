@@ -70,9 +70,9 @@ p {
 #nav_bar li{
   list-style: none;
   float: left;  
-  font-size: 17px;
+  font-size: 14px;
   color: white;
-  padding: 12px 20px;
+  padding: 12px 15px;
   height: 17px;
   border-right: 2px solid #404040;
 }
@@ -187,6 +187,22 @@ p {
 }
 
 /* end maps */
+
+.caption {
+  display:none;
+}
+
+#gallery {
+  height: 300px;
+}
+#gallery ul {
+  list-style: none;
+}
+
+#gallery li {
+  float: left;
+  padding: 20px 25px 0px;
+}
 
 /* begin pagination */
 .digg_pagination {
