@@ -18,7 +18,7 @@ class Post < ActiveRecord::Base
 	has_many :tags, :through => :taggings
 	has_permalink :title, :update => true
 	
-	has_attached_file :image, :styles => { :small => "150x150>" }, 
+	has_attached_file :image, :styles => { :small => "150x150>", :large => "600x600>" }, 
 	                  :url => "/assets/posts/:id/:style/:basename.:extension", 
 	                  :path => ":rails_root/public/assets/posts/:id/:style/:basename.:extension"
 	                  
