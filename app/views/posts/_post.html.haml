@@ -11,7 +11,7 @@
     = link_to 'Destroy', post, :method => :delete, :confirm => "Are you sure?"
   .post_body
     = raw(RDiscount.new(coderay(post.body)).to_html)
-    = image_tag post.image.url(:small) unless post.image.url(:small) == "/images/small/missing.png"
+    %center= image_tag post.image.url(:large) unless post.image.url(:large) == "/images/small/missing.png"
   .tags
     %strong tags:
     - post.tags.each do |t|

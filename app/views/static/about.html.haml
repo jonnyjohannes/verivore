@@ -1,13 +1,19 @@
 - title "about me"
 
 .grid_9
-  .canvas
+  .canvas{:style => "height: 360px; margin-bottom: 20px;"}
     .blog_content
       %h1= yield(:title)
       
-      %h2 Jonathan (Jonny) Johannes 
-      %p 
-        I currently work for a startup called #{link_to "Foodtree", "http://foodtree.com"}.
+      %h2{:style => "margin-bottom: 20px;"} Jonathan (Jonny) Johannes 
+      .grid_3.alpha
+        = image_tag "/images/profile.jpg"
+      
+      .grid_5.omega
+        %p 
+          Your friendly neighbourhood lover of tech, food and physics. 
+          %em 
+            Smart Guy Who Gets Things Done at #{link_to "@foodtree", "http://twitter/foodtree"}.
 
 .grid_3.sidebar
   = render "shared/contact"
