@@ -19,32 +19,36 @@
     %br/
     = f.text_area :procedure
   %p
-    = f.label :pack_style, "Pack Style"
+    = f.label :process_pressure_dial_2000, "Process Pressure (Dial) 2000ft"
     %br/
-    = f.text_field :pack_style  
+    = f.text_field :process_pressure_dial_2000
   %p
-    = f.label :jar_size, "Jar Size"
+    = f.label :process_pressure_dial_4000, "Process Pressure (Dial) 4000ft"
     %br/
-    = f.text_field :jar_size
+    = f.text_field :process_pressure_dial_4000  
   %p
-    = f.label :process_time_1, "Process Time 1"
+    = f.label :process_pressure_dial_6000, "Process Pressure (Dial) 6000ft"
     %br/
-    = f.text_field :process_time_1
+    = f.text_field :process_pressure_dial_6000
   %p
-    = f.label :process_time_2, "Process Time 2"
+    = f.label :process_pressure_dial_8000, "Process Pressure (Dial) 8000ft"
     %br/
-    = f.text_field :process_time_2   
+    = f.text_field :process_pressure_dial_8000
   %p
-    = f.label :process_time_3, "Process Time 3"
+    = f.label :process_pressure_weighted_below_1000, "Process Pressure (Weighted) Below 1000ft"
     %br/
-    = f.text_field :process_time_3
+    = f.text_field :process_pressure_weighted_below_1000
   %p
-    = f.label :process_time_4, "Process Time 4"
+    = f.label :process_pressure_weighted_above_1000, "Process Pressure (Weighted) Above 1000ft"
     %br/
-    = f.text_field :process_time_4
+    = f.text_field :process_pressure_weighted_above_1000
   %p
-    = f.label :process_pressure, "Process Pressure"
+    = f.label :process_time_pint, "Process Time For Pint"
     %br/
-    = f.text_field :process_pressure  
+    = f.text_field :process_time_pint 
+  %p
+    = f.label :process_time_quart, "Process Time For Quart"
+    %br/
+    = f.text_field :process_time_quart
   %p.button 
     = f.submit

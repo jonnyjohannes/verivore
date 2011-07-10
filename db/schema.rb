@@ -10,23 +10,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110412051825) do
+ActiveRecord::Schema.define(:version => 20110708185027) do
 
   create_table "canned_foods", :force => true do |t|
     t.string   "name"
     t.text     "quantity"
     t.text     "quality"
     t.text     "procedure"
-    t.string   "pack_style"
-    t.string   "jar_size"
-    t.integer  "process_time_1"
-    t.integer  "process_time_2"
-    t.integer  "process_time_3"
-    t.integer  "process_time_4"
-    t.integer  "process_pressure"
+    t.integer  "process_pressure_dial_2000"
+    t.integer  "process_pressure_dial_4000"
+    t.integer  "process_pressure_dial_6000"
+    t.integer  "process_pressure_dial_8000"
+    t.integer  "process_time_pint"
     t.string   "permalink"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "process_time_quart"
+    t.integer  "process_pressure_weighted_below_1000"
+    t.integer  "process_pressure_weighted_above_1000"
   end
 
   create_table "comments", :force => true do |t|

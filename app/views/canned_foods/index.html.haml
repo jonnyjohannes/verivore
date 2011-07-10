@@ -1,30 +1,34 @@
 - title "Canned Foods Calculator"
 
-= content_for :head do
-  %script{:src => "http://maps.google.com/maps/api/js?sensor=true", :type => "text/javascript"}
-  %script{:src => "/javascripts/maps.js", :type => "text/javascript"}
-  
-.grid_6
-  %h2= yield(:title)
+.grid_6 
+  .grid_4.alpha
+    %h2= yield(:title)
+    %br/
+    - if admin?
+      = link_to 'New Canned Food', new_canned_food_path
 
-.grid_6
-  = form_tag canned_foods_path, :method => 'get' do 
-    = text_field_tag :search, params[:search]
-    = submit_tag "Search", :name => nil
-
-%div{:clear => 'both'}
-
-.grid_6.alpha
-  - if admin?
-    = link_to 'New Canned Food', new_canned_food_path
+  .grid_2.omega#food_search
+    = form_tag canned_foods_path, :method => 'get' do 
+      = text_field_tag :search, params[:search], :placeholder => 'Search for food...'
   
-  %strong Page coming soon! Until then, enjoy the map on the right which locates where you are.
-  
+  .clear    
   = render :partial => @canned_foods
+  
+.grid_6
+  %p 
+    This 'canning calculator' is here to help you navigate (in my opinion) the useful but gross looking PDFs that the 
+    = link_to "USDA has on canning information", "http://www.uga.edu/nchfp/publications/publications_usda.html"
+    
+    
+  %p Right now I've only scrapped the veggie info, but more will come shortly.
+  
+  %p So peruse the list to the left (or you can search for a food by name), when you click on one you'll be taken to a details page with a map that you can click on to find out what your elevation is and the corresponding canning pressure that you'll have to process to.
+  
+  %p I hope you find this easier to navigate than the USDA's pdfs or at the very least enjoy the bubble that finds your elevation on the map.
+  
+  %p Happy canning, and please avoid botulism!  
 
-.grid_6.omega
-  #map_canvas
-  #elevation
-  -# :javascript
-  -#   $('#elevation').append('<p>Elevation: m</p>')
+
+
+      
     

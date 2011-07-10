@@ -12,7 +12,13 @@ function initialize() {
     zoom: 10,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
-  var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+  var mapp = map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+  var elevator = new google.maps.ElevationService();
+  
+  google.maps.event.addListener(map, 'click', getElevation);
+  
+  google.maps.event.addListenerOnce(map, 'tilesloaded', VR.switch_headers);
   
   // Try W3C Geolocation (Preferred)
   if(navigator.geolocation) {
@@ -21,9 +27,9 @@ function initialize() {
       initialLocation = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
       contentString = "<br/>Hey, looks like you're canning here.  Neat!"
       map.setCenter(initialLocation);
-      infowindow.setContent(contentString)
-      infowindow.setPosition(initialLocation)
-      infowindow.open(map)
+      //infowindow.setContent(contentString)
+      //infowindow.setPosition(initialLocation)
+      //infowindow.open(map)
     }, function() {
       handleNoGeolocation(browserSupportFlag);
     });
@@ -53,4 +59,40 @@ function initialize() {
     }
     map.setCenter(initialLocation);
   }
+  
+  function getElevation(event) {
+
+    var locations = [];
+    
+    
+    // Retrieve the clicked location and push it on the array
+    var clickedLocation = event.latLng;
+    locations.push(clickedLocation);
+
+    // Create a LocationElevationRequest object using the array's one value
+    var positionalRequest = {
+      'locations': locations
+    }
+
+    // Initiate the location request
+    elevator.getElevationForLocations(positionalRequest, function(results, status) {
+      if (status == google.maps.ElevationStatus.OK) {
+
+        // Retrieve the first result
+        if (results[0]) {
+          elevation = results[0];
+          // Open an info window indicating the elevation at the clicked position
+          infowindow.setContent("Looks like you're canning at " + Math.round(results[0].elevation) + " meters. Neat!");
+          infowindow.setPosition(clickedLocation);
+          infowindow.open(map);
+          VR.calculate_pressure(results[0].elevation * 3.2808399) ////convert meters to feet for elevation
+        } else {
+          alert("No results found");
+        }
+      } else {
+        alert("Elevation service failed due to: " + status);
+      }
+    });
+  }
 }
+

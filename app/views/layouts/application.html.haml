@@ -1,12 +1,10 @@
 !!!
 %html
   %head
-    %title
-      verivore - #{h(yield(:title) || "Loving Food and Tech")}
-    = stylesheet_link_tag "verivore"
-    = stylesheet_link_tag "960"
+    %title verivore - #{h(yield(:title) || "Loving Food and Tech")}
+    = stylesheet_link_tag "verivore", '960'
+    = javascript_include_tag 'application'
     %script{:type => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js" }
-    = javascript_include_tag "application.js"    
     = csrf_meta_tag
     = yield :head
     

@@ -1,9 +1,20 @@
 - title "Canned Food: #{@canned_food.name.titleize}"
 
-- form_tag @canned_food, :method => 'get' do 
-  = text_field_tag :elevation, params[:elevation]
-  = submit_tag "Elevation", :name => nil
+= content_for :head do
+  %script{:src => "http://maps.google.com/maps/api/js?sensor=true", :type => "text/javascript"}
+  %script{:src => "/javascripts/maps.js", :type => "text/javascript"}
   
-= render :partial => @canned_food
-.grid_6.omega
-  = link_to 'See All Canned Foods', canned_foods_path
+.grid_6  
+  = render :partial => @canned_food
+  
+.grid_6
+  #loading_gif= image_tag('/images/loading-gif-animation.gif', :width => '50px', :height => '50px')
+  #click_around
+    %h2 Click around the map!
+  #map_canvas
+  
+  #elevation
+:javascript
+  VR.hide_elevations();
+     
+      

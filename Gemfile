@@ -14,6 +14,7 @@ gem 'paperclip'
 gem 'rmagick'
 
 group :test, :development do
+  gem 'taps'
   gem 'rspec'
   gem 'rspec-rails', '>= 2.0.0.beta.10'
 end
