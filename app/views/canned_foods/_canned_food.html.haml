@@ -1,38 +1,51 @@
 = div_for canned_food do
-  %h3
+  %h1
     = link_to_unless_current h(canned_food.name.titleize), canned_food
   - if params[:action] == "show"
     %p 
       %b Quantity: 
       = canned_food.quantity
+      
     %p
       %b Quality:
       = canned_food.quality
+      
     %p
       %b Procedure:
       = canned_food.procedure
+      
     %p
-      %b Pack Style: 
-      = canned_food.pack_style
+      %b Processing Pressure 
+      .pressure
+        %ul
+          %li dial-gauge pressure canner:
+          %li
+            #elevation_2000= canned_food.process_pressure_dial_2000
+            #elevation_4000= canned_food.process_pressure_dial_4000
+            #elevation_6000= canned_food.process_pressure_dial_6000
+            #elevation_8000= canned_food.process_pressure_dial_8000
+          %li lbs
+        .clear
+        %ul
+          %li weighted-gauge pressure canner:
+          %li
+            #elevation_below_1000= canned_food.process_pressure_weighted_below_1000
+            #elevation_above_1000= canned_food.process_pressure_weighted_above_1000
+          %li lbs    
+    .clear
     %p
-      %b Jar Size:
-      = canned_food.jar_size
-    %p
-      %b 
-        Processing Time:
-      - if params[:elevation] == 1
-        = canned_food.process_time_1
-      - elsif params[:elevation] == 2
-        = canned_food.process_time_2
-      - elsif params[:elevation] == 3 
-        = canned_food.process_time_3
-      - elsif params[:elevation] == 4
-        = canned_food.process_time_4
-      minutes
-    %p= canned_food.process_pressure
+      %b Processing Time:
+      .pint
+        pint: 
+        = canned_food.process_time_pint
+        minutes
+      .quart
+        quart:
+        = canned_food.process_time_quart
+        minutes
+    
 
     - if admin?
       = link_to 'Edit', edit_canned_food_path(canned_food)
       |
       = link_to 'Destroy', canned_food, :method => :delete, :confirm => "Are you sure?"
-  %hr/

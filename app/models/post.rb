@@ -27,6 +27,10 @@ class Post < ActiveRecord::Base
 	
 	after_save :assign_tags
 	attr_writer :tag_names
+  attr_accessor :image_file_name
+  attr_accessor :image_content_type
+  attr_accessor :image_file_size
+  attr_accessor :image_updated_at
 	
   cattr_reader :per_page
   @@per_page = 5
