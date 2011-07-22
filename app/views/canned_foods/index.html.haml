@@ -1,32 +1,33 @@
 - title "Canned Foods Calculator"
 
-.grid_6 
-  .grid_4.alpha
+.grid_6.canvas
+  .canvas_content
     %h2= yield(:title)
     %br/
     - if admin?
       = link_to 'New Canned Food', new_canned_food_path
 
-  .grid_2.omega#food_search
-    = form_tag canned_foods_path, :method => 'get' do 
-      = text_field_tag :search, params[:search], :placeholder => 'Search for food...'
+    #food_search
+      = form_tag canned_foods_path, :method => 'get' do 
+        = text_field_tag :search, params[:search], :placeholder => 'Search for food...'
+    
+    .clear   
+    = render :partial => @canned_foods
   
-  .clear    
-  = render :partial => @canned_foods
-  
-.grid_6
-  %p 
-    This 'canning calculator' is here to help you navigate the awesome but super inaccessible PDFs that the 
-    = link_to "USDA has on canning information", "http://www.uga.edu/nchfp/publications/publications_usda.html"
+.grid_6.canvas
+  .canvas_content
+    %p 
+      This 'canning calculator' is here to help you navigate the awesome but super inaccessible PDFs that the 
+      = link_to "USDA has on canning information", "http://www.uga.edu/nchfp/publications/publications_usda.html"
     
     
-  %p Right now I've only scrapped the veggie info, but more will come shortly.
+    %p Right now I've only scrapped the veggie info, but more will come shortly.
   
-  %p So peruse the list to the left (or you can search for a food by name), when you click on one you'll be taken to a details page with a map that you can click on to find out what your elevation is and the corresponding canning pressure that you'll have to process to.
+    %p So peruse the list to the left (or you can search for a food by name), when you click on one you'll be taken to a details page with a map that you can click on to find out what your elevation is and the corresponding canning pressure that you'll have to process to.
   
-  %p I hope you find this easier to navigate than the USDA's pdfs or at the very least enjoy the bubble that finds your elevation on the map.
+    %p I hope you find this easier to navigate than the USDA's pdfs or at the very least enjoy the bubble that finds your elevation on the map.
   
-  %p Happy canning, and please avoid botulism!  
+    %p Happy canning, and please avoid botulism!  
 
 
 
