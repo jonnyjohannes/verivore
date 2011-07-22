@@ -8,7 +8,7 @@ body {
 	font-size: 14px;
 	margin: 0;
 	padding: 0;
-	background: #fff;
+	background: white url(/images/grid.png) repeat 50% -10px;
 }
 
 a {
@@ -40,10 +40,11 @@ p {
   width: 100%;
   padding: 0;
   margin: 0;
-  height: 150px;
+  height: 50px;
   border-bottom: 1px solid #787878;
-  background-image: url("/images/header_footer.png");
-  background-repeat: repeat-x;
+  background-color: #595959;
+  background-image: -webkit-gradient(linear, 0% 100%, 0% 70%, from(#4A4A4A), to(#595959));
+  color: #AAA;
   position: relative;
   font-style: none;
 }
@@ -51,30 +52,21 @@ p {
   font-size: 30px;
   color: black;
   position: absolute;
-  bottom: 50px;
+  bottom: 10px;
   text-decoration: none;
 }
 
-#nav_bar {
-  background-image: url("/images/nav_bar.png");
-  margin: -20px 0 0 10px;
-  height: 45px;
-  width: 940px;
-  position: relative;
-}
-
-#nav_bar a{
+#header a{
   color: white;
 }
 
-#nav_bar li{
+#header li{
   list-style: none;
   float: left;  
   font-size: 14px;
   color: white;
   padding: 12px 15px;
   height: 17px;
-  border-right: 2px solid #404040;
 }
 /* end header and nav bar */
 
@@ -89,7 +81,7 @@ p {
 
 .blog_content {
   width: 640px;
-  margin: 20px auto 100px;
+  margin: 20px auto 0px;
   padding: 10px 0;
 }
 
@@ -148,15 +140,16 @@ p {
 
 #footer {
   width: 100%;
+  margin-top: 20px;
   bottom: 0;
   clear: both;
-  height: 150px;
-  border-top: 1px solid #787878;
-  background-image: url("/images/header_footer.png");
+  height: 70px;
+  background-color: white;
 }
 
 #copyright {
   margin: 10px;
+  padding-top: 30px;
 }
 
 /* end footer */
@@ -191,7 +184,7 @@ p {
   float: center;
   background: url('/images/foodtree.png') no-repeat;
   display: block;
-  height: 77px;
+  height: 65px;
   text-indent: -9999px;
   margin: 20px 0px 0px 10px;
 }
