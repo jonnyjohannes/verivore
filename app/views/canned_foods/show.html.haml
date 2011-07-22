@@ -4,11 +4,13 @@
   %script{:src => "http://maps.google.com/maps/api/js?sensor=true", :type => "text/javascript"}
   %script{:src => "/javascripts/maps.js", :type => "text/javascript"}
   
-.grid_6  
-  = render :partial => @canned_food
+.grid_6.canvas
+  .canvas_content
+    = render :partial => @canned_food
   
 .grid_6
-  #loading_gif= image_tag('/images/loading-gif-animation.gif', :width => '50px', :height => '50px')
+  .canvas
+    .canvas_content#loading_gif= image_tag('/images/loading-gif-animation.gif', :width => '50px', :height => '50px')
   #click_around
     %h2 Click around the map!
   #map_canvas
