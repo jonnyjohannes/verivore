@@ -1,5 +1,5 @@
 .DS_Store
-.rvmrc
+.rvmrc*
 tmp/**/*
 log/*.log
 config/database.yml
