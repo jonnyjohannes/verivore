@@ -16,7 +16,8 @@ class Post < ActiveRecord::Base
 	has_many :comments, :order => "created_at DESC", :dependent => :destroy
 	has_many :taggings, :dependent => :destroy
 	has_many :tags, :through => :taggings
-	has_permalink :title, :update => true
+  extend FriendlyId
+  friendly_id :title, use: :slugged
 	
 	has_attached_file :image, :styles => { :small => "150x150>", :large => "600x600>" }, 
 	                  :url => "/assets/posts/:id/:style/:basename.:extension", 
@@ -34,10 +35,6 @@ class Post < ActiveRecord::Base
 	
   cattr_reader :per_page
   @@per_page = 5
-  
-  def to_param
-    "#{id}-#{permalink}"
-  end
   
   def short_body
     wordcount = 50

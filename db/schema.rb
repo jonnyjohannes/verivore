@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,59 +11,60 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110708185027) do
+ActiveRecord::Schema.define(:version => 20130408223613) do
 
   create_table "canned_foods", :force => true do |t|
-    t.string   "name"
-    t.text     "quantity"
-    t.text     "quality"
-    t.text     "procedure"
-    t.integer  "process_pressure_dial_2000"
-    t.integer  "process_pressure_dial_4000"
-    t.integer  "process_pressure_dial_6000"
-    t.integer  "process_pressure_dial_8000"
-    t.integer  "process_time_pint"
-    t.string   "permalink"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "process_time_quart"
-    t.integer  "process_pressure_weighted_below_1000"
-    t.integer  "process_pressure_weighted_above_1000"
+    t.string    "name"
+    t.text      "quantity"
+    t.text      "quality"
+    t.text      "procedure"
+    t.integer   "process_pressure_dial_2000"
+    t.integer   "process_pressure_dial_4000"
+    t.integer   "process_pressure_dial_6000"
+    t.integer   "process_pressure_dial_8000"
+    t.integer   "process_time_pint"
+    t.string    "permalink"
+    t.timestamp "created_at",                           :null => false
+    t.timestamp "updated_at",                           :null => false
+    t.integer   "process_time_quart"
+    t.integer   "process_pressure_weighted_below_1000"
+    t.integer   "process_pressure_weighted_above_1000"
   end
 
   create_table "comments", :force => true do |t|
-    t.integer  "post_id"
-    t.string   "name"
-    t.string   "email"
-    t.text     "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer   "post_id"
+    t.string    "name"
+    t.string    "email"
+    t.text      "body"
+    t.timestamp "created_at", :null => false
+    t.timestamp "updated_at", :null => false
   end
 
   create_table "posts", :force => true do |t|
-    t.string   "title"
-    t.text     "body"
-    t.boolean  "published"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "permalink"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
+    t.string    "title"
+    t.text      "body"
+    t.boolean   "published"
+    t.timestamp "created_at",         :null => false
+    t.timestamp "updated_at",         :null => false
+    t.string    "permalink"
+    t.string    "image_file_name"
+    t.string    "image_content_type"
+    t.integer   "image_file_size"
+    t.timestamp "image_updated_at",   :null => false
+    t.string    "slug"
   end
 
   create_table "taggings", :force => true do |t|
-    t.integer  "post_id"
-    t.integer  "tag_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer   "post_id"
+    t.integer   "tag_id"
+    t.timestamp "created_at", :null => false
+    t.timestamp "updated_at", :null => false
   end
 
   create_table "tags", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "name"
+    t.timestamp "created_at", :null => false
+    t.timestamp "updated_at", :null => false
   end
 
 end

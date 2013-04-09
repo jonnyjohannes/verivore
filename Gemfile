@@ -1,33 +1,39 @@
 source 'http://rubygems.org'
 
-gem 'rails'
+ruby '2.0.0'
+gem 'rails', '3.2.12'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'
 gem 'haml'
-gem 'will_paginate', '>=3.0.pre2'
-gem 'rdiscount', '>=1.6.8'
+gem 'will_paginate'
+gem 'rdiscount'
 gem 'coderay'
 gem 'paperclip'
+gem 'friendly_id'
 #gem 'rmagick'
 
 group :test, :development do
+  gem 'mysql2'
   gem 'taps'
   gem 'rspec'
-  gem 'rspec-rails', '>= 2.0.0.beta.10'
+  gem 'rspec-rails'
+end
+
+group :production do 
+  gem 'pg'
 end
 
 group :cucumber do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'cucumber-rails'
-  gem 'cucumber', '>= 0.7.3'
-  gem 'rspec-rails', '>= 2.0.0.beta.10'
+  gem 'cucumber'
+  gem 'rspec-rails'
   gem 'spork'
   gem 'launchy'    # So you can do Then show me the page
-  gem 'webrat', '>= 0.4.3', :require => false
+  gem 'webrat', :require => false
 end
 
 # Use unicorn as the web server
