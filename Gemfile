@@ -13,16 +13,11 @@ gem 'coderay'
 gem 'paperclip'
 gem 'friendly_id'
 #gem 'rmagick'
+gem 'pg'
 
 group :test, :development do
-  gem 'mysql2'
-  gem 'taps'
   gem 'rspec'
   gem 'rspec-rails'
-end
-
-group :production do 
-  gem 'pg'
 end
 
 group :cucumber do
