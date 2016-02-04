@@ -10,13 +10,9 @@ development:
   encoding: unicode
   database: verivore_development
   pool: 5
-  username: ComScan
-  password:
 
 test:
   adapter: postgresql
   encoding: unicode
   database: verivore_test
   pool: 5
-  username: ComScan
-  password:

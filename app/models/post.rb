@@ -13,9 +13,9 @@
 
 class Post < ActiveRecord::Base
   validates_presence_of :body, :title 
-	has_many :comments, :order => "created_at DESC", :dependent => :destroy
-	has_many :taggings, :dependent => :destroy
-	has_many :tags, :through => :taggings
+	has_many :comments, -> { order(created_at: :desc) }, dependent: :destroy
+	has_many :taggings, dependent: :destroy
+	has_many :tags, through: :taggings
   extend FriendlyId
   friendly_id :title, use: :slugged
 	

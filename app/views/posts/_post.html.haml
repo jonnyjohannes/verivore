@@ -10,7 +10,7 @@
     |
     = link_to 'Destroy', post, :method => :delete, :confirm => "Are you sure?"
   .post_body
-    = raw(RDiscount.new(coderay(post.body)).to_html)
+    = raw(RDiscount.new(post.body).to_html)
     %center= image_tag post.image.url(:large) unless post.image.url(:large) == "/images/large/missing.png"
   .tags
     %strong tags:
